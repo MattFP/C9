@@ -16,6 +16,8 @@
 
 @import 'bootstrap-sprockets'; 
 @import 'bootstrap';
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 h1, h2, h3 {
     font-family: 'Gantari'
@@ -47,4 +49,11 @@ body {
     padding-top: 50px; 
     padding-bottom: 100px;
     color: white;
+} 
+
+a:hover {
+    background: #ff6f6f; 
+    background-indent: 15px; 
+    font-size: 16pt;
+    transition: font-size 0.5 ease-out; 
 } 
