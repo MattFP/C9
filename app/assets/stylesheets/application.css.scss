@@ -20,7 +20,7 @@
 @import "font-awesome";
 
 h1, h2, h3 {
-    font-family: 'Gantari'
+    font-family: 'Ubuntu', sans-serif; 
 }
 
 body {
@@ -28,7 +28,7 @@ body {
 }
 
 .navbar, .home-callout {
-    font-family: 'Carter One';
+    font-family: 'Josefin Sans', sans-serif;
     border: none; 
     background: rgb(111,0,255);
     background: linear-gradient(90deg, rgba(111,0,255,1) 0%, rgba(132,145,255,1) 23%, rgba(108,230,255,1) 100%);
@@ -36,8 +36,9 @@ body {
 
 .navbar-default .navbar-brand, 
 .navbar-default .navbar-nav > li > a { 
-    font-size: 30px; 
+    font-size: 20px;
     color: white; 
+    padding-bottom: 15px; 
     &:hover {
         color: white;
         opacity: 0.75; 
@@ -51,9 +52,35 @@ body {
     color: white;
 } 
 
-a:hover {
-    background: #ff6f6f; 
-    background-indent: 15px; 
-    font-size: 16pt;
-    transition: font-size 0.5 ease-out; 
-} 
+.nulllink { 
+  font-size: 15pt; 
+  padding: 15px;
+  background: rgba(0,0,0,0);
+  transition: background 1s, font-size 1s; 
+  background-clip: content-box;
+    &:hover {
+    font-size: 30pt;
+    background: rgba(255,0,100,0.5);
+    background-clip: content-box;
+    text-decoration: none; 
+    cursor: pointer;
+    }
+}
+
+.navbar-brand {
+    font-weight: 1000;
+}
+
+.grid-container {
+    display: grid;
+    gap: 1rem;
+  }
+  
+.grid-item {
+    background: gray;
+    text-align: center;
+    padding: 10rem;
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+  

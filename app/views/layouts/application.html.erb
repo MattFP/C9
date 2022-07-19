@@ -3,18 +3,16 @@
    <head>
      <title>Meu Site</title>
      <%= csrf_meta_tags %>
-     <link rel="preconnect" href="//fonts.googleapis.com">
-     <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
-     <link href="//fonts.googleapis.com/css2?family=Gantari:wght@400;700;800&display=swap" rel="stylesheet"> 
+     
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Gantari:wght@400;700;800&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Ubuntu:ital,wght@0,300;1,500&display=swap" rel="stylesheet">
      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
    </head>
    
    <body>
-     <nav class="navbar navbar-default navbar-static-top" role="navigation">
+     <nav class="navbar navbar-expand-sm navbar-default navbar-static-top" role="navigation">
        <div class='container'>
          <div class="navbar-header">
            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
@@ -23,12 +21,16 @@
              <span class="icon-bar"></span>
              <span class="icon-bar"></span>
            </button>
-           <a href="/" class="navbar-brand"><i class="fa fa-code-fork"></i> Mattest</a> 
+           <%= link_to root_path, class:"navbar-brand" do %>
+           <i class="fa fa-code-fork"></i>
+           Matest 
+           <% end %>
+           
          </div>
          <div class="collapse navbar-collapse" id="main-nav-collapse">
            <ul class="nav navbar-nav navbar-right">
-             <li><a href="/about">Sobre</a></li>
-             <li><a href="/testPage">Testes</a></li>
+             <li class="nav-item dropdown"><%= link_to "Sobre", about_path %></li>
+             <li class="nav-item dropdown"><%= link_to "Testes", testpage_path %></li>
            </ul> 
          </div><!-- /.navbar-collapse --> 
        </div>
@@ -36,5 +38,28 @@
      
      <%= yield %> 
       
+     <footer>
+      <div class="text-center">
+       <nav aria-label="Page navigation">
+         <ul class="pagination">
+           <li>
+             <a href="#" aria-label="Previous">
+               <span aria-hidden="true">&laquo;</span>
+             </a>
+           </li>
+           <li><a href="#">1</a></li>
+           <li><a href="#">2</a></li>
+           <li><a href="#">3</a></li>
+           <li><a href="#">4</a></li>
+           <li><a href="#">5</a></li>
+           <li>
+             <a href="#" aria-label="Next">
+               <span aria-hidden="true">&raquo;</span>
+             </a>
+           </li>
+         </ul>
+       </nav>
+      </div>
+     </footer>
    </body>
 </html>
